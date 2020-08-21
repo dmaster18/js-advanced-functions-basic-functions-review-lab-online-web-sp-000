@@ -26,7 +26,7 @@ function actionApplyer(startingInteger, array) {
   if (array.length === 0 ) {
     return startingInteger;
   } else {
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       arrayOfTransforms.push(array[i](startingInteger));
     }
     return arrayOfTransforms;
