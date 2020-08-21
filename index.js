@@ -5,10 +5,30 @@ function saturdayFun(activity="roller-skate") {
 
 let mondayWork = function(activity="go to the office") {
   return `This Monday, I will ${activity}.`;
-};
+}
 
 function wrapAdjective(visualFlair = "*") {
   return function(adjective = "special") {
     return `You are ${visualFlair}${adjective}${visualFlair}!`;
-  };
+  }
+}
+
+
+let Calculator = {
+  add: function(x, y) {return x + y;},
+  subtract: function(x, y) {return x - y;},
+  multiply: function(x, y) {return x*y;},
+  divide: function(x, y) {return x/y;}
+}
+
+function actionApplyer(startingInteger, array) {
+  let arrayOfTransforms = [];
+  if (array.length === 0 ) {
+    return startingInteger;
+  } else {
+    for (i = 0; i < array.length; i++) {
+      arrayOfTransforms.push(array[i](startingInteger));
+    }
+    return arrayOfTransforms;
+  }
 }
