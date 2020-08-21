@@ -22,13 +22,12 @@ let Calculator = {
 }
 
 function actionApplyer(startingInteger, array) {
-  let arrayOfTransforms = [];
   if (array.length === 0 ) {
     return startingInteger;
   } else {
     for (let i = 0; i < array.length; i++) {
-      arrayOfTransforms.push(array[i](startingInteger));
+      startingInteger = array[i](startingInteger)
     }
-    return arrayOfTransforms;
+    return startingInteger;
   }
 }
